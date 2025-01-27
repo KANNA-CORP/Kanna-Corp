@@ -1,26 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>KANNA Token - Web3 Hemp Community</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KANNA Token - Écosystème Chanvre Français</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>🌱 KANNA Token</h1>
-        <button id="connectWallet">Connect Wallet</button>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="kanna-logo.png" alt="KANNA Logo" width="50">
+            <span>KANNA</span>
+        </div>
+        <button id="connectWallet" class="wallet-btn">
+            <i class="fas fa-wallet"></i> Connect Wallet
+        </button>
     </header>
 
-    <section>
-        <h2>Utility Token for Legal Hemp in France</h2>
-        <p>Contract: <a href="https://bscscan.com/token/0x5750f0e74671230449c0395d189cCa215Ff7E36A" id="contractAddress">0x5750...7E36A</a></p>
-        <div id="tokenBalance">Balance: ...</div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Révolutionnez l'industrie du chanvre avec la blockchain</h1>
+            <div class="token-info">
+                <div class="contract-box">
+                    <span>Contract:</span>
+                    <a href="https://bscscan.com/token/0x5750f0e74671230449c0395d189cCa215Ff7E36A" 
+                       class="contract-link">
+                       0x5750...7E36A
+                    </a>
+                </div>
+                <div class="price" id="tokenPrice">
+                    Prix: Chargement...
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section>
-        <h3>DAO Voting (Snapshot)</h3>
-        <iframe src="https://snapshot.org/#/kanna-dao.eth" width="100%" height="500px"></iframe>
+    <!-- Features Grid -->
+    <section class="features">
+        <div class="feature-card">
+            <i class="fas fa-leaf"></i>
+            <h3>Agriculture Durable</h3>
+            <p>Soutien aux cultivateurs de chanvre français</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-prescription-bottle"></i>
+            <h3>Médicinal</h3>
+            <p>Financement de recherches médicales</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-vote-yea"></i>
+            <h3>Gouvernance DAO</h3>
+            <p>Décidez de l'avenir du projet</p>
+        </div>
     </section>
 
+    <!-- DAO Section -->
+    <section class="dao">
+        <h2>Votes Actifs</h2>
+        <iframe src="https://snapshot.org/#/kanna-dao.eth" 
+                class="snapshot-iframe"></iframe>
+    </section>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/web3@1.7.3/dist/web3.min.js"></script>
     <script src="app.js"></script>
 </body>
